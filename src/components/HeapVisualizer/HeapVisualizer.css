@@ -1,0 +1,183 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #efd57e 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(236, 194, 194, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.heap-type {
+    background: linear-gradient(45deg, #4834d4, #686de0);
+}
+
+.insert-btn {
+    background: linear-gradient(45deg, #00d2d3, #54a0ff);
+}
+
+.extract-btn {
+    background: linear-gradient(45deg, #ff9ff3, #f368e0);
+}
+
+input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 16px;
+    width: 80px;
+    text-align: center;
+}
+
+.visualization {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tree-container, .array-container {
+    flex: 1;
+    background: rgba(182, 126, 126, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#tree-svg {
+    width: 100%;
+    height: 400px;
+    background: rgba(228, 220, 220, 0.05);
+    border-radius: 10px;
+}
+
+.node {
+    fill: #ff6b6b;
+    stroke: #fff;
+    stroke-width: 3;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.node-text {
+    fill: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.edge {
+    stroke: #fff;
+    stroke-width: 2;
+    opacity: 0.8;
+}
+
+.array-item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.array-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.array-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.heap-property {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .visualization {
+        flex-direction: column;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
